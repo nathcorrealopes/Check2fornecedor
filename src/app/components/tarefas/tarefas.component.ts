@@ -12,6 +12,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './tarefas.component.css'
 })
   export class TarefasComponent {
+    data = new Date('2021-04-23T10:00:00.000');
     tarefas:Tarefa[] = [];
     tarefaForm: FormGroup = new FormGroup({})
 

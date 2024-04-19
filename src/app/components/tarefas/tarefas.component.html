@@ -20,6 +20,7 @@
         <th scope="col">ID</th>
         <th scope="col">Nome</th>
         <th scope="col">Descrição</th>
+        <th scope="col">Data</th>
         <th scope="col">Ações</th>
       </tr>
     </thead>
@@ -29,6 +30,7 @@
                 <th scope="row">{{item.id}}</th>
                 <td>{{item.nome}}</td>
                 <td>{{item.descricao}}</td>
+                <td>{{data | date : 'dd/MM/yyyy HH:mm'}}</td>
                 <td><input type="button" value="remover" class="btn btn-danger" (click)="removerTarefa(item.id)"/></td>
             </tr>
         }
