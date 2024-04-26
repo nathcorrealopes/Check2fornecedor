@@ -4,12 +4,11 @@ import { CommonModule } from '@angular/common';
 import { Cliente } from '../../interfaces/cliente';
 import { ClienteService } from '../../services/cliente.service';
 import { ReactiveFormsModule } from '@angular/forms';
-import { TarefasComponent } from '../tarefas/tarefas.component';
 
 @Component({
   selector: 'app-cliente',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule, TarefasComponent],
+  imports: [CommonModule, ReactiveFormsModule],
   templateUrl: './cliente.component.html',
   styleUrl: './cliente.component.css'
 })
@@ -50,7 +49,7 @@ export class ClienteComponent {
  }
 
  listar():void{
-     this.clientes = this.clienteService.listar();
+    this.clienteService.listar().subscribe((listClient) => (this.clientes = listClient))
  }
 
  ngOnInit():void{
