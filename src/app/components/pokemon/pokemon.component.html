@@ -4,14 +4,19 @@
         <thead>
           <tr>  
             <th scope="col">Nome do pokemon</th>
+            <th scope="col">Imagem do pokemon</th>
           </tr>
         </thead>
         <tbody>
             @for (pokemon of pokemons; track $index){
                 <tr>
                     <td>{{pokemon.name}}</td>
+                    <td><img src={{pokemon.imageUrl}} alt={{pokemon.name}}></td>
                 </tr>
             }
         </tbody>
     </table>
 </div>
+
+
+<img src="" alt="">
