@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { Cliente } from '../../interfaces/cliente';
 import { ClienteService } from '../../services/cliente.service';
 import { ReactiveFormsModule } from '@angular/forms';
+import { filter } from 'rxjs';
 
 @Component({
   selector: 'app-cliente',
@@ -42,7 +43,8 @@ export class ClienteComponent {
       id: this.generateRandomString(6)
     }
     this.clienteForm.reset()
-    this.clienteService.adicionar(clienteNovo)
+    this.clientes.push(clienteNovo)
+    this.clienteService.adicionar(clienteNovo).subscribe()
     alert('Cliente cadastrado com sucesso!')
 
   }
@@ -57,7 +59,8 @@ export class ClienteComponent {
  }
 
  remover(id:string):void{
-  this.clienteService.remover(id)
+  this.clientes = this.clientes.filter((c) => c.id !== id)
+  this.clienteService.remover(id).subscribe()
   alert('removido com sucesso!')
  }
 

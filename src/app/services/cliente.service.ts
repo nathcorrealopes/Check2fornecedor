@@ -21,15 +21,26 @@ export class ClienteService {
   }
 
   remover(id:string){
-    const cliente = this.clientes.find(c => c.id == id);
+    //const cliente = this.clientes.find(c => c.id == id);
 
-    if(cliente){
-       const index = this.clientes.indexOf(cliente);
-       this.clientes.splice(index,1);
-    }
+    // if(cliente){
+    //    const index = this.clientes.indexOf(cliente);
+    //    this.clientes.splice(index,1);
+    // }
+
+    return this.http.delete(`${this.clientesUrl}/${id}`)
   }
 
   adicionar(cliente:Cliente){
-    this.clientes.push(cliente);
+
+    const httpHeader = {
+      headers:{
+        "Content-Type":"Application/json"
+      }
+    }
+
+    return this.http.post(this.clientesUrl, cliente, httpHeader)
+
+    //this.clientes.push(cliente);
   }
 }
