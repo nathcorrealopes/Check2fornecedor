@@ -30,7 +30,10 @@
                 <th scope="row">{{item.id}}</th>
                 <td>{{item.nome}}</td>
                 <td>{{item.telefone}}</td>
-                <td><input type="button" value="remover" class="btn btn-danger" (click)="remover(item.id)"/></td>
+                <td>
+                  <input type="button" value="Remover" class="btn btn-danger m-3" (click)="remover(item.id)"/>
+                  <a type="button" class="btn btn-warning" href="cliente/{{item.id}}">Editar</a>
+                </td>
             </tr>
         }
       

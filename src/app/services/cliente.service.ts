@@ -12,6 +12,16 @@ export class ClienteService {
 
   }
 
+  httpHeader = {
+    headers:{
+      "Content-Type":"Application/json"
+    }
+  }
+
+  atualizar(cliente:Cliente){
+    return this.http.put(`${this.clientesUrl}/${cliente.id}`, cliente, this.httpHeader)
+  }
+
   //Esta lista virá da API
   clientes:Cliente[] = [];
 
@@ -33,14 +43,12 @@ export class ClienteService {
 
   adicionar(cliente:Cliente){
 
-    const httpHeader = {
-      headers:{
-        "Content-Type":"Application/json"
-      }
-    }
-
-    return this.http.post(this.clientesUrl, cliente, httpHeader)
+    return this.http.post(this.clientesUrl, cliente, this.httpHeader)
 
     //this.clientes.push(cliente);
+  }
+
+  getById(id:string):Observable<Cliente>{
+    return this.http.get(`${this.clientesUrl}/${id}`) as Observable<Cliente>
   }
 }
