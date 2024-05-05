@@ -10,5 +10,25 @@
       "nome": "Livia Gallafrio",
       "telefone": "987654321"
     }
+  ],
+  "fornecedores": [
+    {
+      "nome": "Ilan transports teste",
+      "telefone": "456739224",
+      "endereco": "Rua sei la, 123",
+      "id": "19878"
+    },
+    {
+      "id": "98632",
+      "nome": "Livia transports",
+      "telefone": "92639293",
+      "endereco": "Rua nao sei, 091"
+    },
+    {
+      "id": "HcvKUV",
+      "nome": "wfjksd",
+      "telefone": "'123313",
+      "endereco": "kasjbKJHDF"
+    }
   ]
 }

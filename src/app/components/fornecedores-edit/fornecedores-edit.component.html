@@ -1,16 +1,19 @@
 <div class="container-fluid p-5">
-    <h1>Edite o cliente - {{cliente?.nome}}</h1>
-    <form [formGroup]="clienteForm" (ngSubmit)="update()" class="row g-3">
+    <h1>Edite o fornecedor - {{fornecedor?.nome}}</h1>
+    <form [formGroup]="fornecedorForm" (ngSubmit)="update()" class="row g-3">
     <input type="hidden" formControlName="id"/>
     <div class="col-auto">
       <input type="text" class="form-control" id="inputPassword2" placeholder="Nome" formControlName="nome">
     </div>
     <div class="col-auto">
         <input type="text" class="form-control" id="inputPassword2" placeholder="Telefone" formControlName="telefone">
-      </div>
+    </div>
+    <div class="col-auto">
+        <input type="text" class="form-control" id="inputPassword2" placeholder="Endereço" formControlName="endereco">
+    </div>
     <div class="col-auto">
       <button type="submit" class="btn btn-success">Atualizar</button>
-      <a type="button" class="btn btn-danger" href="cliente">Voltar</a>
+      <a type="button" class="btn btn-danger" href="fornecedores">Voltar</a>
     </div>
   </form>
 </div>
