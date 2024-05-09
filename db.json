@@ -1,34 +1,34 @@
 {
   "clientes": [
     {
-      "nome": "Ilan tes6e",
-      "telefone": "123456789",
-      "id": "gadsjkldfh"
+      "nome": "cacho",
+      "telefone": "5555",
+      "id": "gggg"
     },
     {
-      "id": "kjgfsaldkjfha",
-      "nome": "Livia Gallafrio",
-      "telefone": "987654321"
+      "nome": "na",
+      "telefone": "987654321",
+      "id": "ffff"
     }
   ],
   "fornecedores": [
     {
-      "nome": "Ilan transports teste",
-      "telefone": "456739224",
-      "endereco": "Rua sei la, 123",
-      "id": "19878"
+      "nome": "nathalia",
+      "telefone": "111111",
+      "endereco": "Rua cai",
+      "id": "1234"
     },
     {
-      "id": "98632",
-      "nome": "Livia transports",
-      "telefone": "92639293",
-      "endereco": "Rua nao sei, 091"
+      "id": "9567",
+      "nome": "nathalia lopes",
+      "telefone": "926",
+      "endereco": "Rua caite"
     },
     {
-      "id": "HcvKUV",
-      "nome": "wfjksd",
-      "telefone": "'123313",
-      "endereco": "kasjbKJHDF"
+      "nome": "Nathalia Correa Lopes",
+      "telefone": "11975976532",
+      "endereco": "rua caitezal ve",
+      "id": "73sVeA"
     }
   ]
 }
